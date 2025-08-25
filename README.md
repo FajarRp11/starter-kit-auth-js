@@ -8,7 +8,7 @@
 <div align="center">
   <!-- Badges -->
   <img src="https://img.shields.io/badge/Next.js-15.x-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js">
-  <img src="https://img.shields.io/badge/Typescript-ES6+-F7DF1E?style=for-the-badge&logo=typescript&logoColor=black" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Typescript-F7DF1E?style=for-the-badge&logo=typescript&logoColor=blue" alt="TypeScript">
   <img src="https://img.shields.io/github/license/FajarRp11/starter-kit-auth-js?style=for-the-badge" alt="License">
 </div>
 
