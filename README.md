@@ -8,7 +8,7 @@
 <div align="center">
   <!-- Badges -->
   <img src="https://img.shields.io/badge/Next.js-15.x-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js">
-  <img src="https://img.shields.io/badge/Typescript-f9f9f9?style=for-the-badge&logo=typescript&logoColor=blue" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Typescript-f5f5f5?style=for-the-badge&logo=typescript&logoColor=blue" alt="TypeScript">
 </div>
 
 ---
