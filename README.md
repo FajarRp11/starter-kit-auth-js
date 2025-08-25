@@ -9,9 +9,11 @@
   <!-- Badges -->
   <img src="https://img.shields.io/badge/Next.js-15-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js">
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase">
   <img src="https://img.shields.io/badge/Auth.js-black?style=for-the-badge&logo=auth0&logoColor=white" alt="Auth.js">
   <img src="https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma">
   <img src="https://img.shields.io/badge/Zod-3E67B1?style=for-the-badge&logo=zod&logoColor=white" alt="Zod">
+  <img src="https://img.shields.io/github/license/FajarRp11/starter-kit-auth-js?style=for-the-badge" alt="License">
 </div>
 
 ---
@@ -29,6 +31,7 @@
 
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Bahasa**: [TypeScript](https://www.typescriptlang.org/)
+- **Backend & Database**: [Supabase](https://supabase.io/)
 - **Otentikasi**: [Auth.js](https://authjs.dev/)
 - **ORM**: [Prisma](https://www.prisma.io/)
 - **Validasi Skema**: [Zod](https://zod.dev/)
@@ -70,17 +73,22 @@ Salin file `.env.example` menjadi `.env`:
 cp .env.example .env
 ```
 
-Kemudian, buka file `.env` dan sesuaikan variabel di dalamnya, terutama `DATABASE_URL` untuk menunjuk ke database Anda.
+Kemudian, buka file `.env` dan isi variabelnya dengan kredensial dari proyek Supabase Anda. Anda bisa menemukannya di **Project Settings > Database** dan **Project Settings > API**.
 
-**Contoh untuk PostgreSQL:**
+**Contoh untuk Supabase:**
 
 ```
-DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE"
+# Diambil dari Project Settings > Database > Connection string > URI
+DATABASE_URL="postgresql://postgres:[YOUR-PASSWORD]@db.[YOUR-PROJECT-ID].supabase.co:5432/postgres"
+
+# Diambil dari Project Settings > API
+NEXT_PUBLIC_SUPABASE_URL="https://[YOUR-PROJECT-ID].supabase.co"
+NEXT_PUBLIC_SUPABASE_ANON_KEY="[YOUR-ANON-KEY]"
 ```
 
 ### 4. Jalankan Migrasi Database
 
-Terapkan skema database ke database Anda menggunakan Prisma Migrate:
+Terapkan skema database ke database Supabase Anda menggunakan Prisma Migrate:
 
 ```bash
 npx prisma migrate dev
