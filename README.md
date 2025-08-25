@@ -121,7 +121,3 @@ Proyek ini siap untuk di-deploy di platform mana pun yang mendukung Next.js. Unt
 Kontribusi, isu, dan permintaan fitur sangat diterima! Jangan ragu untuk memeriksa halaman [isu](https://github.com/FajarRp11/starter-kit-auth-js/issues).
 
 ---
-
-## 📄 Lisensi
-
-Proyek ini dilisensikan di bawah Lisensi MIT. Lihat file `LICENSE` untuk detailnya.
