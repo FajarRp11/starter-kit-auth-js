@@ -78,8 +78,13 @@ Kemudian, buka file `.env` dan isi variabelnya dengan kredensial dari proyek Sup
 **Contoh untuk Supabase:**
 
 ```
-# Diambil dari Project Settings > Database > Connection string > URI
-DATABASE_URL="postgresql://postgres:[YOUR-PASSWORD]@db.[YOUR-PROJECT-ID].supabase.co:5432/postgres"
+# Diambil dari Project Settings > Database > Connection pooling
+# Digunakan oleh aplikasi untuk koneksi sehari-hari
+DATABASE_URL="postgresql://postgres.[YOUR-PROJECT-ID]:[YOUR-PASSWORD]@aws-0-[REGION][.pooler.supabase.com:6543/postgres?pgbouncer=true](https://.pooler.supabase.com:6543/postgres?pgbouncer=true)"
+
+# Diambil dari Project Settings > Database > Direct connection
+# Digunakan oleh Prisma Migrate untuk menjalankan migrasi
+DIRECT_URL="postgresql://postgres.[YOUR-PROJECT-ID]:[YOUR-PASSWORD]@aws-0-[REGION][.pooler.supabase.com:5432/postgres](https://.pooler.supabase.com:5432/postgres)"
 
 # Diambil dari Project Settings > API
 NEXT_PUBLIC_SUPABASE_URL="https://[YOUR-PROJECT-ID].supabase.co"
