@@ -21,14 +21,13 @@ function SubmitButton() {
       className="w-full py-3 font-semibold text-white bg-green-500 rounded-lg hover:bg-green-600 transition-colors"
       disabled={pending}
     >
-      {pending ? "Loading..." : "Register"}
+      {pending ? "Loading..." : "Login"}
     </Button>
   );
 }
 
-const RegisterForm = () => {
+const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   // Type inference for state will be: null | { error: ... }
   const [state, formAction] = useActionState(signUpCredentials, null);
   console.log(state);
@@ -53,22 +52,6 @@ const RegisterForm = () => {
           </AlertDescription>
         </Alert>
       )}
-      <div className="space-y-2">
-        <Label htmlFor="name" className="text-sm font-medium text-gray-700">
-          Name
-        </Label>
-        <Input
-          name="name"
-          id="name"
-          type="text"
-          placeholder="Name"
-          className="w-full px-4 py-3 bg-white/80 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-        />
-        {/* Menggunakan optional chaining untuk mengakses error */}
-        {errorObject?.name && (
-          <InputError message={errorObject.name.join(", ")} />
-        )}
-      </div>
       <div className="space-y-2">
         <Label htmlFor="email" className="text-sm font-medium text-gray-700">
           E-mail Address
@@ -108,36 +91,9 @@ const RegisterForm = () => {
           <InputError message={errorObject.password.join(", ")} />
         )}
       </div>
-      <div className="space-y-2">
-        <Label
-          htmlFor="confirm-password"
-          className="text-sm font-medium text-gray-700"
-        >
-          Confirm Password
-        </Label>
-        <div className="relative">
-          <Input
-            name="confirmPassword" // Nama harus sama dengan properti di objek error
-            id="confirm-password"
-            type={showConfirmPassword ? "text" : "password"}
-            placeholder="*********"
-            className="w-full px-4 py-3 bg-white/80 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-          />
-          <button
-            type="button"
-            onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-            className="absolute inset-y-0 right-0 flex items-center px-4 text-gray-600"
-          >
-            {showConfirmPassword ? <FaRegEyeSlash /> : <FaRegEye />}
-          </button>
-        </div>
-        {errorObject?.confirmPassword && (
-          <InputError message={errorObject.confirmPassword.join(", ")} />
-        )}
-      </div>
       <SubmitButton />
     </form>
   );
 };
 
-export default RegisterForm;
+export default LoginForm;
