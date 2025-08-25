@@ -12,14 +12,13 @@
   <img src="https://img.shields.io/badge/Auth.js-black?style=for-the-badge&logo=auth0&logoColor=white" alt="Auth.js">
   <img src="https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma">
   <img src="https://img.shields.io/badge/Zod-3E67B1?style=for-the-badge&logo=zod&logoColor=white" alt="Zod">
-  <img src="https://img.shields.io/github/license/FajarRp11/starter-kit-auth-js?style=for-the-badge" alt="License">
 </div>
 
 ---
 
 ## ✨ Mengapa Menggunakan Starter Kit Ini?
 
-- **Hemat Waktu**: Konfigurasi awal untuk otentikasi sudah disiapkan.
+- **Hemat Waktu**: Konfigurasi awal untuk otentikasi dengan tumpukan teknologi modern sudah disiapkan.
 - **Praktik Terbaik**: Dibangun di atas fondasi Next.js modern menggunakan App Router.
 - **Mudah Diperluas**: Kode yang bersih dan terstruktur memudahkan Anda untuk menambahkan fitur baru.
 - **Font Modern**: Sudah terintegrasi dengan [Geist Font](https://vercel.com/font) dari Vercel untuk tipografi yang tajam dan modern.
@@ -29,7 +28,10 @@
 ## 🛠️ Teknologi Utama
 
 - **Framework**: [Next.js](https://nextjs.org/)
-- **Bahasa**: [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- **Bahasa**: [TypeScript](https://www.typescriptlang.org/)
+- **Otentikasi**: [Auth.js](https://authjs.dev/)
+- **ORM**: [Prisma](https://www.prisma.io/)
+- **Validasi Skema**: [Zod](https://zod.dev/)
 - **Styling**: CSS Modules / Global CSS (mudah diintegrasikan dengan Tailwind CSS)
 - **Package Manager**: Bekerja dengan `npm`, `yarn`, `pnpm`, dan `bun`.
 
@@ -60,7 +62,33 @@ yarn install
 pnpm install
 ```
 
-### 3. Jalankan Server
+### 3. Siapkan File Environment
+
+Salin file `.env.example` menjadi `.env`:
+
+```bash
+cp .env.example .env
+```
+
+Kemudian, buka file `.env` dan sesuaikan variabel di dalamnya, terutama `DATABASE_URL` untuk menunjuk ke database Anda.
+
+**Contoh untuk PostgreSQL:**
+
+```
+DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE"
+```
+
+### 4. Jalankan Migrasi Database
+
+Terapkan skema database ke database Anda menggunakan Prisma Migrate:
+
+```bash
+npx prisma migrate dev
+```
+
+Perintah ini akan membuat tabel database berdasarkan skema di `prisma/schema.prisma`.
+
+### 5. Jalankan Server
 
 Nyalakan server pengembangan untuk memulai coding:
 
