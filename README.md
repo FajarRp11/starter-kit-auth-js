@@ -7,8 +7,12 @@
 
 <div align="center">
   <!-- Badges -->
-  <img src="https://img.shields.io/badge/Next.js-15.x-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js">
-  <img src="https://img.shields.io/badge/Typescript-f5f5f5?style=for-the-badge&logo=typescript&logoColor=blue" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Next.js-15-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Auth.js-black?style=for-the-badge&logo=auth0&logoColor=white" alt="Auth.js">
+  <img src="https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma">
+  <img src="https://img.shields.io/badge/Zod-3E67B1?style=for-the-badge&logo=zod&logoColor=white" alt="Zod">
+  <img src="https://img.shields.io/github/license/FajarRp11/starter-kit-auth-js?style=for-the-badge" alt="License">
 </div>
 
 ---
